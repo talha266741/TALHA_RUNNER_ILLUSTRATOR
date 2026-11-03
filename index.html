@@ -1,1 +1,16 @@
-<!DOCTYPE html><html lang="tr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="panel.css"></head><body><div id="talha-runner-root"></div><script src="panel.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>html,body{margin:0;height:100%;background:#121722;color:#f5f7fb;font:13px Arial,sans-serif}#talha-runner-root{height:100%}.bootstrap{padding:18px;color:#d9e4ff}</style>
+<link rel="stylesheet" href="./panel.css">
+</head>
+<body>
+<div id="talha-runner-root"><div class="bootstrap">Talha Runner Illustrator yükleniyor…<p>Bu yazı kaybolmuyorsa panel.js yüklenemedi veya çalışmadı.</p></div></div>
+<script>
+window.onerror=function(message,source,line){document.getElementById("talha-runner-root").innerHTML='<div class="bootstrap">Panel JavaScript hatası: '+String(message)+' (satır '+line+')</div>';return false;};
+</script>
+<script src="./panel.js" onerror="document.getElementById('talha-runner-root').innerHTML='<div class=&quot;bootstrap&quot;>panel.js dosyası yüklenemedi.</div>'"></script>
+</body>
+</html>
